@@ -3,76 +3,104 @@
 html[lang="ta"] body, html[lang="ta"] button, html[lang="ta"] input { font-family: "Noto Sans Tamil", "DM Sans", sans-serif; }
 
 
-/* ANAND DESIGNS - Mobile alignment fix */
+/* FINAL MOBILE HERO ALIGNMENT FIX */
 
-/* Prevent horizontal overflow */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+@media screen and (max-width: 520px) {
 
-.hero,
-.hero-copy,
-.hero-art {
-  min-width: 0;
-  box-sizing: border-box;
-}
-
-.hero {
-  grid-template-columns: minmax(0, 1fr);
-  width: 100%;
-}
-
-.hero-art {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  margin-inline: auto;
-  overflow: hidden;
-}
-
-.poster-one {
-  left: 8%;
-  width: 52%;
-}
-
-.poster-two {
-  right: 8%;
-  width: 42%;
-}
-
-/* Tamil mobile typography */
-@media (max-width: 520px) {
-
-  html[lang="ta"] .hero-copy h1 {
-    font-size: clamp(32px, 8vw, 42px);
-    line-height: 1.3;
-    letter-spacing: -1px;
-    overflow-wrap: break-word;
+  html, body {
+    width: 100%;
     max-width: 100%;
+    overflow-x: clip;
   }
 
-  html[lang="ta"] .section-head h2,
-  html[lang="ta"] .custom-band h2,
-  html[lang="ta"] .about-section h2 {
-    font-size: clamp(30px, 8vw, 40px);
-    line-height: 1.35;
-    letter-spacing: -1px;
-    overflow-wrap: break-word;
+  main {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
   }
 
   .hero {
-    padding-left: 6%;
-    padding-right: 6%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 100%;
+    padding: 55px 0 50px;
+    margin: 0;
+    gap: 35px;
+    overflow: hidden;
+  }
+
+  .hero-copy {
+    width: 88%;
+    max-width: 88%;
+    min-width: 0;
+    margin-inline: auto;
   }
 
   .hero-art {
+    position: relative;
+    width: 88%;
+    max-width: 88%;
+    min-width: 0;
     height: 280px;
+    padding: 14px;
+    margin-inline: auto;
+    justify-self: center;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
-  .poster-one,
+  .poster-one {
+    left: 8%;
+    right: auto;
+    width: 52%;
+    max-width: 52%;
+    box-sizing: border-box;
+    padding: 12px;
+  }
+
   .poster-two {
+    right: 8%;
+    left: auto;
+    width: 42%;
+    max-width: 42%;
+    box-sizing: border-box;
+    padding: 12px;
+  }
+
+  .art-caption {
+    right: 10px;
+    font-size: 9px;
+  }
+
+  html[lang="ta"] .hero-copy h1 {
+    font-size: clamp(30px, 7.5vw, 40px);
+    line-height: 1.35;
+    letter-spacing: -1px;
+    overflow-wrap: anywhere;
+  }
+
+  html[lang="ta"] .hero-copy p {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  /* Preserve two-column product gallery */
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 10px;
+  }
+
+  .product-card {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .product-art,
+  .sample {
     max-width: 100%;
+    box-sizing: border-box;
   }
 }
-
