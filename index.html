@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171512"><meta name="description" content="Anand Designs - Creative design studio and digital design marketplace.">
+  <title>Anand Designs | Creative Design Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#"><img src="/logo.png" alt="Anand Designs logo" onerror="this.style.display='none'"><span>ANAND <b>DESIGNS</b><small>CREATIVE DESIGN STUDIO</small></span></a>
+  <nav class="desktop-nav"><a href="#marketplace" data-en="Explore designs" data-ta="டிசைன்களைப் பார்க்க">Explore designs</a><a href="#services" data-en="Services" data-ta="சேவைகள்">Services</a><a href="#about" data-en="About" data-ta="எங்களைப் பற்றி">About</a></nav>
+  <div class="header-actions"><button class="icon-btn" id="themeToggle" aria-label="Toggle theme">☾</button><button class="lang-btn" id="langToggle">தமிழ்</button><a class="cart-link" href="#marketplace">Explore <span>↗</span></a><button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button></div>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy"><div class="eyebrow"><i></i> INDEPENDENT CREATIVE STUDIO</div>
+    <h1>Designs that<br><em>make you stand out.</em></h1>
+    <p>Thoughtful visuals, ready-to-use PSD templates and custom creative work. Find the right design for your next big idea.</p>
+    <div class="hero-actions"><a class="primary-btn" href="#marketplace">Explore designs <span>↗</span></a><a class="text-btn" href="https://wa.me/919626434799?text=Hi%20Anand%20Designs%2C%20I%20need%20a%20custom%20design." target="_blank" rel="noreferrer">Request a custom design ↗</a></div>
+    <div class="hero-proof"><div class="avatar-stack"><b>A</b><b>D</b><b>✳</b></div><span>Creative ideas, made visual.</span></div>
+  </div>
+  <div class="hero-art"><div class="art-top"><span>SELECTED WORK / 2026</span><span>01 — 04</span></div><div class="poster poster-one"><small>MAKE IT</small><strong>UN<br>FORGET<br>TABLE.</strong><span>ANAND DESIGNS / CREATIVE STUDIO</span></div><div class="poster poster-two"><span>IDEAS INTO<br>IMPACT.</span><b>✳</b><small>DESIGN / CREATE / INSPIRE</small></div><div class="art-caption">A little imagination goes a long way.</div></div>
+</section>
+<section class="ticker"><div>VISUAL STORIES <b>✳</b> READY-TO-USE PSDs <b>✳</b> CUSTOM DESIGN <b>✳</b> MADE WITH PURPOSE <b>✳</b> VISUAL STORIES <b>✳</b></div></section>
+<section class="section marketplace" id="marketplace">
+  <div class="section-head"><div><div class="eyebrow">THE DESIGN LIBRARY</div><h2>Find your next <em>favourite.</em></h2></div><p>Browse creative assets made to help your ideas get noticed.</p></div>
+  <div class="market-tools"><label class="searchbox">⌕ <input id="searchInput" placeholder="Search designs, categories..." aria-label="Search designs"></label><div class="filters" id="filters"><button class="filter active" data-cat="All">All designs</button><button class="filter" data-cat="Posters">Posters</button><button class="filter" data-cat="Events">Events</button><button class="filter" data-cat="Business">Business</button><button class="filter" data-cat="Celebrations">Celebrations</button></div></div>
+  <div class="product-grid" id="productGrid"></div><div class="catalog-foot"><span id="resultCount">Showing featured designs</span><button class="outline-btn" id="loadMore">Load more designs ↓</button></div>
+</section>
+<section class="custom-band" id="services"><div><div class="eyebrow">HAVE SOMETHING IN MIND?</div><h2>Made for you.<br><em>Not from a template.</em></h2></div><div class="custom-side"><p>Need a banner, invitation, poster or a design that is uniquely yours? Tell Anand what you have in mind and work directly with the designer.</p><a class="primary-btn light" href="https://wa.me/919626434799?text=Hi%20Anand%20Designs%2C%20I%20want%20to%20discuss%20a%20custom%20design." target="_blank" rel="noreferrer">Chat on WhatsApp ↗</a></div></section>
+<section class="about-section" id="about"><div class="about-mark">AD<span>✳</span></div><div><div class="eyebrow">A CREATIVE PARTNER</div><h2>Good design is<br><em>good communication.</em></h2><p>Anand Designs is an independent creative studio by Anand Kumar V. We bring ideas to life through thoughtful visuals, ready-made design resources and custom creative services.</p><a class="text-btn" href="https://www.instagram.com/ananddesigns24/" target="_blank" rel="noreferrer">Follow our work on Instagram ↗</a></div></section>
+</main>
+<footer><a class="brand footer-brand" href="#"><img src="/logo.png" alt=""><span>ANAND <b>DESIGNS</b><small>CREATIVE DESIGN STUDIO</small></span></a><span>© <span id="year"></span> Anand Designs. Made with intention.</span><a href="mailto:anandvelmurugan2003@gmail.com">Get in touch ↗</a></footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="/app.js"></script>
+</body></html>
