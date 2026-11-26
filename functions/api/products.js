@@ -3,17 +3,20 @@ export async function onRequestGet({ env }) {
   try {
     const { results } = await env.DB.prepare(`
       SELECT
-        id,
-        category_id,
-        title,
-        slug,
-        description,
-        price_paise,
-        preview_key,
-        created_at
-      FROM products
-      WHERE status = 'published'
-      ORDER BY created_at DESC
+        p.id,
+        p.category_id,
+        c.name AS category_name,
+        p.title,
+        p.slug,
+        p.description,
+        p.price_paise,
+        p.preview_key,
+        p.created_at
+      FROM products p
+      LEFT JOIN categories c
+        ON p.category_id = c.id
+      WHERE p.status = 'published'
+      ORDER BY p.created_at DESC
     `).all();
 
     return Response.json({
